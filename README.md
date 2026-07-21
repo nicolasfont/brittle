@@ -364,10 +364,17 @@ brittle --pick=5 test/basic.js
 
 `--pick` takes priority over the selected test's own annotations: it runs even if it was\
 marked `skip` or `todo`, and any other `solo`'d tests (via `.solo()` or\
-`configure({ solo: true })`) are ignored in favor of the selected test. `--pick` cannot be\
-combined with `--solo` or with `--jobs` set above `1` — both will error, since isolating a\
-single test makes solo mode and concurrent test files redundant. `--pick` can only be passed\
-once; passing it more than once is also an error.
+`configure({ solo: true })`) are ignored in favor of the selected tests. `--pick` cannot be\
+combined with `--solo` or with `--jobs` set above `1` — both will error, since isolating\
+tests makes solo mode and concurrent test files redundant.
+
+`--pick` can be passed multiple times to run several tests by position:
+
+```sh
+brittle --pick=0 --pick=2 test/basic.js
+```
+
+If any of the given positions is out of range, the run errors.
 
 Tests can also be isolated by name with the `--name`/`-n` flag. It runs only the top-level\
 tests whose name contains the given string (case-sensitive substring match, no regex):
@@ -393,7 +400,8 @@ brittle-bare --name="network" --solo test/basic.js
 This is the way to narrow a name filter down to the test currently under investigation. Since\
 the two flags intersect, the run reports `0/0` when none of the matched tests are `solo`'d.
 
-Combining `--name` with `--pick` picks the nth (0-indexed) test among the matches:
+Combining `--name` with `--pick` filters by name first, then picks the nth (0-indexed)\
+test(s) among the matches. `--pick` may be repeated here too:
 
 ```sh
 brittle-bare --name="network" --pick=1 test/basic.js
@@ -854,7 +862,7 @@ brittle-node|brittle-bare [flags] <files>
 Flags:
   --version, -v             Print the current version
   --solo, -s                Engage solo mode
-  --pick, -p <n>            Isolate the nth (0-indexed) top-level test
+  --pick, -p <n>            Isolate the nth (0-indexed) top-level test (repeatable)
   --name, -n <name>         Run only top-level tests whose name contains <name>
   --bail, -b                Bail out on first assert failure
   --coverage, -c            Turn on coverage
