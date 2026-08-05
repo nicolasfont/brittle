@@ -98,14 +98,25 @@ class Runner {
       }
     }
 
+    let subasserts = 0
+
     return (type, ...args) => {
       if (type === 'start') {
         console.log('TAP version 13')
       } else if (type === 'assert') {
         const [indent, oknotok, number, message] = args
+
+        if (indent) {
+          subasserts++
+        } else if (subasserts > 0) {
+          console.log(`${INDENT}1..${subasserts}`)
+          subasserts = 0
+        }
+
         console.log(`${indent}${oknotok} ${number} ${message}`)
       } else if (type === 'comment') {
         const [indent, ...rest] = args
+        if (!indent) subasserts = 0
         console.log(`${indent}#`, ...rest)
       } else if (type === 'results') {
         const [tests, assertions] = args
