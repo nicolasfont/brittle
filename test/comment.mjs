@@ -14,6 +14,7 @@ await tester(
   # classic comment
       ok 1 - passed
       # here is a comment
+      1..1
   ok 1 - classic comment # time = 0.68674ms
 
   1..1
@@ -42,6 +43,7 @@ await tester(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a comment
+      1..2
   ok 1 - classic comment after classic child # time = 0.742369ms
 
   1..1
@@ -70,6 +72,7 @@ await tester(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a comment
+      1..2
   ok 1 - classic comment after inverted child # time = 0.728261ms
 
   1..1
@@ -98,6 +101,7 @@ await tester(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a child comment
+      1..2
   ok 1 - classic comment inside classic child # time = 0.743901ms
 
   1..1
@@ -126,6 +130,7 @@ await tester(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a child comment
+      1..2
   ok 1 - classic comment on inverted child # time = 0.724892ms
 
   1..1
@@ -151,6 +156,7 @@ await spawner(
   # inverted comment
       ok 1 - passed
       # here is a comment
+      1..1
   ok 1 - inverted comment # time = 0.723792ms
 
   1..1
@@ -180,6 +186,7 @@ await spawner(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a comment
+      1..2
   ok 1 - inverted comment after classic child # time = 1.1016ms
 
   1..1
@@ -209,6 +216,7 @@ await spawner(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a comment
+      1..2
   ok 1 - inverted comment after inverted child # time = 0.781687ms
 
   1..1
@@ -240,6 +248,7 @@ await spawner(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a child comment
+      1..2
   ok 1 - inverted comment inside classic child # time = 0.844898ms
 
   1..1
@@ -271,6 +280,7 @@ await spawner(
       ok 1 - passed
       ok 2 - (child) - passed
       # here is a child comment
+      1..2
   ok 1 - inverted comment on inverted child # time = 0.784698ms
 
   1..1

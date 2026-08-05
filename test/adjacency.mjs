@@ -24,6 +24,7 @@ await tester(
       ok 1 - (little test A) - little passed
       ok 2 - (big test A) - big passed
       ok 3 - (big test A) - big pass again
+      1..3
   ok 1 - trailing adjacent awaits # time = 0.79643ms
 
   1..1
@@ -61,6 +62,7 @@ await tester(
       ok 1 - (little test B) - little passed
       ok 2 - (big test B) - big passed
       ok 3 - (big test B) - big pass again
+      1..3
   ok 1 - interruptive adjacent awaits # time = 0.775436ms
 
   1..1

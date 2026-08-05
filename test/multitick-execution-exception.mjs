@@ -18,6 +18,7 @@ await tester(
       ok 1 - first
       ok 2 - should resolve
       ok 3 - second
+      1..3
   ok 1 - multi-tick execution (promise resolve) # time = 103.513407ms
 
   1..1
@@ -52,6 +53,7 @@ await tester(
         stack: async _fn ([eval]:5:5)
         ...
       ok 3 - second
+      1..3
   not ok 1 - multi-tick execution (promise reject) # time = 118.550599ms
 
   1..1
@@ -88,6 +90,7 @@ await tester(
         stack: async _fn ([eval]:5:5)
         ...
       ok 3 - second
+      1..3
   not ok 1 - multi-tick exception (promise resolve) # time = 120.87336ms
 
   1..1
@@ -116,6 +119,7 @@ await tester(
       ok 1 - first
       ok 2 - should reject
       ok 3 - second
+      1..3
   ok 1 - multi-tick exception (promise reject) # time = 104.047078ms
 
   1..1

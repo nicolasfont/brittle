@@ -19,6 +19,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, classic child, no plans # time = 1.089232ms
 
   1..1
@@ -48,6 +49,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, classic child, no plans, await child # time = 1.110137ms
 
   1..1
@@ -77,6 +79,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, inverted child, no plans (no awaiting child) # time = 0.738362ms
 
   1..1
@@ -106,6 +109,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, inverted child, no plans (no awaiting child) # time = 0.738362ms
 
   1..1
@@ -135,6 +139,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, classic child, parent plan # time = 1.121999ms
 
   1..1
@@ -165,6 +170,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, classic child, parent+child plan # time = 1.062033ms
 
   1..1
@@ -195,6 +201,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, inverted child, parent plan (no awaiting child) # time = 0.759473ms
 
   1..1
@@ -227,6 +234,7 @@ await spawner(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - inverted parent, inverted child, parent+child plan (no awaiting child) # time = 0.73341ms
 
   1..1
@@ -262,6 +270,7 @@ await spawner(
       # before await child
       # after await child
       ok 2 - parent pass
+      1..2
   ok 1 - nesting - inverted parent, inverted child, parent plan (await child before parent assert) # time = 11.604408ms
 
   1..1
@@ -293,6 +302,7 @@ await spawner(
   # nesting - inverted parent, inverted child, parent+child plan (await child before parent assert)
       ok 1 - (child assert) - child pass
       ok 2 - parent pass
+      1..2
   ok 1 - nesting - inverted parent, inverted child, parent+child plan (await child before parent assert) # time = 11.430842ms
 
   1..1
@@ -335,6 +345,7 @@ await spawner(
       ok 3 - (child two) - expected truthy value
       ok 4 - (child one) - expected truthy value
       ok 5 - (child two) - passed
+      1..5
   ok 1 - nesting - inverted parent, two inverted children, parent plan, asynchronous child assertions, no awaiting children # time = 20.156899ms
 
   1..1
@@ -379,6 +390,7 @@ await spawner(
       ok 3 - (child one) - expected truthy value
       ok 4 - (child two) - passed
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - inverted parent, two inverted children, parent plan, asynchronous child assertions, awaiting children # time = 20.822921ms
 
   1..1
@@ -423,6 +435,7 @@ await spawner(
       ok 3 - (child one) - expected truthy value
       ok 4 - (child two) - passed
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - inverted parent, two inverted children, parent plan, asynchronous child assertions, awaiting children in reverse order # time = 19.967074ms
 
   1..1
@@ -467,6 +480,7 @@ await spawner(
       ok 3 - (child two) - expected truthy value
       ok 4 - (child one) - expected truthy value
       ok 5 - (child two) - passed
+      1..5
   ok 1 - nesting - inverted parent, two inverted children, parent+children plan, asynchronous child assertions, no awaiting children # time = 19.918183ms
 
   1..1
@@ -517,6 +531,7 @@ await spawner(
       # after await child1, before await child2
       # after await child1
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - inverted parent, two inverted children, parent+child plan, asynchronous child assertions, awaiting children # time = 21.347744ms
 
   1..1
@@ -567,6 +582,7 @@ await spawner(
       # after await child2, before await child1
       # after await child1
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - inverted parent, two inverted children, parent+child plan, asynchronous child assertions, awaiting children in reverse order # time = 21.066805ms
 
   1..1
@@ -595,6 +611,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, classic child, no plans # time = 0.731806ms
 
   1..1
@@ -623,6 +640,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, classic child, no plans, await child # time = 0.756617ms
 
   1..1
@@ -651,6 +669,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, inverted child, no plans (no awaiting child) # time = 0.719493ms
 
   1..1
@@ -682,6 +701,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, inverted child, no plans (await child before parent assert) # time = 11.191369ms
 
   1..1
@@ -711,6 +731,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, classic child, parent plan # time = 0.761372ms
 
   1..1
@@ -741,6 +762,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child test) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, classic child, parent+child plan # time = 0.823596ms
 
   1..1
@@ -770,6 +792,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, inverted child, parent plan (no awaiting child) # time = 0.731171ms
 
   1..1
@@ -799,6 +822,7 @@ await tester(
       ok 1 - parent pass
       ok 2 - (child assert) - child pass
       ok 3 - parent pass
+      1..3
   ok 1 - nesting - classic parent, inverted child, parent+child plan (no awaiting child) # time = 0.738845ms
 
   1..1
@@ -831,6 +855,7 @@ await tester(
       # before await child
       # after await child
       ok 2 - parent pass
+      1..2
   ok 1 - nesting - classic parent, inverted child, parent plan (await child before parent assert) # time = 11.417253ms
 
   1..1
@@ -860,6 +885,7 @@ await tester(
   # nesting - classic parent, inverted child, parent+child plan (await child before parent assert)
       ok 1 - (child assert) - child pass
       ok 2 - parent pass
+      1..2
   ok 1 - nesting - classic parent, inverted child, parent+child plan (await child before parent assert) # time = 10.29768ms
 
   1..1
@@ -899,6 +925,7 @@ await tester(
       ok 3 - (child two) - expected truthy value
       ok 4 - (child one) - expected truthy value
       ok 5 - (child two) - passed
+      1..5
   ok 1 - nesting - classic parent, two inverted children, parent plan, asynchronous child assertions, no awaiting children # time = 20.894735ms
 
   1..1
@@ -940,6 +967,7 @@ await tester(
       ok 3 - (child one) - expected truthy value
       ok 4 - (child two) - passed
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - classic parent, two inverted children, parent plan, asynchronous child assertions, awaiting children # time = 20.7577ms
 
   1..1
@@ -981,6 +1009,7 @@ await tester(
       ok 3 - (child one) - expected truthy value
       ok 4 - (child two) - passed
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - classic parent, two inverted children, parent plan, asynchronous child assertions, awaiting children in reverse order # time = 21.997817ms
 
   1..1
@@ -1022,6 +1051,7 @@ await tester(
       ok 3 - (child two) - expected truthy value
       ok 4 - (child one) - expected truthy value
       ok 5 - (child two) - passed
+      1..5
   ok 1 - nesting - classic parent, two inverted children, parent+children plan, asynchronous child assertions, no awaiting children # time = 20.756846ms
 
   1..1
@@ -1069,6 +1099,7 @@ await tester(
       # after await child1, before await child2
       # after await child1
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - classic parent, two inverted children, parent+child plan, asynchronous child assertions, awaiting children # time = 21.095796ms
 
   1..1
@@ -1116,6 +1147,7 @@ await tester(
       # after await child2, before await child1
       # after await child1
       ok 5 - parent pass
+      1..5
   ok 1 - nesting - classic parent, two inverted children, parent+child plan, asynchronous child assertions, awaiting children in reverse order # time = 20.974754ms
 
   1..1

@@ -16,6 +16,7 @@ await tester(
           _fn ([eval]:4:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..1
   not ok 1 - classic no plan # time = 4.160992ms
 
   1..1
@@ -45,6 +46,7 @@ await tester(
           _fn ([eval]:5:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..1
   not ok 1 - classic with plan # time = 3.890772ms
 
   1..1
@@ -80,6 +82,7 @@ await spawner(
           evalScript (node:internal/process/execution:75:60)
           node:internal/main/eval_string:27:3
         ...
+      1..1
   not ok 1 - inverted no plan # time = 4.071748ms
 
   1..1
@@ -116,6 +119,7 @@ await spawner(
           evalScript (node:internal/process/execution:75:60)
           node:internal/main/eval_string:27:3
         ...
+      1..1
   not ok 1 - inverted with plan # time = 4.063684ms
 
   1..1

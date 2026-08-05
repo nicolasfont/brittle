@@ -29,6 +29,7 @@ TAP version 13
 
 # check resource
   ok 1 - should be equal
+  1..1
 ok 1 - check resource # time = 0.761623ms
 
 # setup resource
@@ -36,6 +37,7 @@ ok 2 - setup resource # time = 0.06351ms
 
 # check resource
     ok 1 - should be equal
+    1..1
 ok 3 - check resource # time = 0.116902ms
 
 # teardown resource
@@ -43,6 +45,7 @@ ok 4 - teardown resource # time = 0.06351ms
 
 # check resource
     ok 1 - should be equal
+    1..1
 ok 5 - check resource # time = 0.116902ms
 
 1..5
@@ -84,6 +87,7 @@ TAP version 13
 
 # solo check resource
   ok 1 - should be equal
+  1..1
 ok 1 - solo check resource # time = 0.761623ms
 
 # setup resource
@@ -91,6 +95,7 @@ ok 2 - setup resource # time = 0.06351ms
 
 # solo check resource
     ok 1 - should be equal
+    1..1
 ok 3 - solo check resource # time = 0.116902ms
 
 # teardown resource
@@ -98,6 +103,7 @@ ok 4 - teardown resource # time = 0.06351ms
 
 # solo check resource
     ok 1 - should be equal
+    1..1
 ok 5 - solo check resource # time = 0.116902ms
 
 1..5
@@ -151,6 +157,7 @@ TAP version 13
 
 # solo check resource
   ok 1 - should be equal
+  1..1
 ok 1 - solo check resource # time = 0.761623ms
 
 # setup resource
@@ -158,6 +165,7 @@ ok 2 - setup resource # time = 0.06351ms
 
 # solo check resource
     ok 1 - should be equal
+    1..1
 ok 3 - solo check resource # time = 0.116902ms
 
 # redundant hook option is ignored
@@ -165,6 +173,7 @@ ok 4 - redundant hook option is ignored # time = 0.06351ms
 
 # solo check resource
     ok 1 - should be equal
+    1..1
 ok 5 - solo check resource # time = 0.116902ms
 
 1..5

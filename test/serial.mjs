@@ -21,10 +21,12 @@ await spawner(
 
   # one
       ok 1 - passed
+      1..1
   ok 1 - one # time = 403.910346ms
 
   # two
       ok 1 - passed
+      1..1
   ok 2 - two # time = 200.537827ms
 
   1..2

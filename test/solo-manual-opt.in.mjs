@@ -21,6 +21,7 @@ await spawner(
 
   # only one solo is ran
       ok 1 - passed
+      1..1
   ok 1 - only one solo is ran # time = 0.332794ms
 
   1..1

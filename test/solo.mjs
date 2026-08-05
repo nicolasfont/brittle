@@ -23,6 +23,7 @@ await spawner(
 
   # only one solo is ran
       ok 1 - passed
+      1..1
   ok 1 - only one solo is ran # time = 0.613949ms
 
   1..1
@@ -58,6 +59,7 @@ await spawner(
 
   # redundant solo option is ignored
       ok 1 - passed
+      1..1
   ok 1 - redundant solo option is ignored # time = 0.613949ms
 
   1..1

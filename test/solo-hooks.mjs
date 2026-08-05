@@ -27,6 +27,7 @@ await spawner(
 
   # should not execute unhooked hooks
       ok 1 - should not have executed unhooked hook
+      1..1
   ok 2 - should not execute unhooked hooks # time = 0.613949ms
 
   1..2
@@ -72,6 +73,7 @@ await spawner(
   # should execute hooks and cleanup
       ok 1 - only one hook should execute
       ok 2 - setup hook should execute
+      1..2
   ok 2 - should execute hooks and cleanup # time = 0.223815ms
 
   # unhook cleanup
@@ -130,6 +132,7 @@ await spawner(
       ok 2 - first hook should execute first
       ok 3 - second hook should execute second
       ok 4 - third hook should execute third
+      1..4
   ok 4 - should execute multiple hooks in order # time = 0.256789ms
 
   1..4
@@ -171,6 +174,7 @@ await spawner(
   # should only execute remaining hooks after selective unhook
       ok 1 - only one hook should execute
       ok 2 - remaining hook should execute
+      1..2
   ok 2 - should only execute remaining hooks after selective unhook # time = 0.234567ms
 
   1..2
@@ -200,6 +204,7 @@ await spawner(
 
   # should run unhook without hook function
       ok 1 - passed
+      1..1
   ok 1 - should run unhook without hook function # time = 0.234567ms
 
   # unhook without hook function
@@ -254,6 +259,7 @@ await spawner(
   
   # should run hooks without solo
       ok 1 - passed
+      1..1
   ok 4 - should run hooks without solo # time = 0.234567ms
   
   # unhook first hook

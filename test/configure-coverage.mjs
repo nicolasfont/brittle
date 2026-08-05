@@ -15,6 +15,7 @@ await spawner(
   # configured coverage should print coverage
       ok 1 - prints here
       ok 2 - also prints here
+      1..2
   ok 1 - configured coverage should print coverage # time = 0.295115ms
 
   1..1

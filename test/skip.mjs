@@ -27,6 +27,7 @@ await spawner(
 
   # run this one
       ok 1 - passed
+      1..1
   ok 1 - run this one # time = 0.59497ms
 
   # skip this one
@@ -34,6 +35,7 @@ await spawner(
 
   # run this other one
       ok 1 - passed
+      1..1
   ok 3 - run this other one # time = 0.052709ms
 
   # skip this other one

@@ -13,6 +13,7 @@ await spawner(
 
   # classic test
       ok 1 - passed
+      1..1
   ok 1 - classic test # time = 0.634787ms
 
   1..1
@@ -40,6 +41,7 @@ await spawner(
 
   # classic test
       ok 1 - passed
+      1..1
   ok 1 - classic test # time = 0.604742ms
   `,
   {
@@ -61,6 +63,7 @@ await spawner(
 
   # inverted test
       ok 1 - passed
+      1..1
   ok 1 - inverted test # time = 0.646337ms
   `,
   {
@@ -84,6 +87,7 @@ await spawner(
 
   # inverted test
       ok 1 - passed
+      1..1
   ok 1 - inverted test # time = 0.672834ms
   `,
   {

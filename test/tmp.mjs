@@ -20,6 +20,7 @@ TAP version 13
 
 # tmp
     ok 1 - passed
+    1..1
 ok 1 - tmp # time = 0.610103ms
 
 1..1

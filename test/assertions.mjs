@@ -46,6 +46,7 @@ await tester(
       ok 15 - should reject
       ok 16 - should reject
       ok 17 - should throw
+      1..17
   ok 1 - passing (default messages) # time = 3.17259ms
 
   1..1
@@ -112,6 +113,7 @@ await tester(
       ok 15 - I have not had it
       ok 16 - in a long
       ok 17 - long time
+      1..17
   ok 1 - passing (custom messages) # time = 3.140034ms
 
   1..1
@@ -144,6 +146,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - prints negative zero # time = 3.140034ms
 
   1..1
@@ -378,6 +381,7 @@ await tester(
           _fn ([eval]:23:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..20
   not ok 1 - failing (default messages) # time = 10.34778ms
 
   1..1
@@ -574,6 +578,7 @@ await tester(
           _fn ([eval]:20:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..17
   not ok 1 - failing (custom messages) # time = 10.129451ms
 
   1..1
@@ -808,6 +813,7 @@ await tester(
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
       ok 34 - should throw
+      1..34
   not ok 1 - passing and failing mixed # time = 10.946447ms
 
   1..1
@@ -867,6 +873,7 @@ await spawner(
       ok 15 - should reject
       ok 16 - should reject
       ok 17 - should throw
+      1..17
   ok 1 - inverted passing (default messages) # time = 2.009916ms
 
   1..1
@@ -934,6 +941,7 @@ await spawner(
       ok 15 - I have not had it
       ok 16 - in a long
       ok 17 - long time
+      1..17
   ok 1 - inverted passing (custom messages) # time = 3.831434ms
 
   1..1
@@ -1207,6 +1215,7 @@ await spawner(
           _fn ([eval]:22:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..18
   not ok 1 - inverted failing (default messages) # time = 11.076319ms
 
   1..1
@@ -1470,6 +1479,7 @@ await spawner(
           _fn ([eval]:21:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..17
   not ok 1 - inverted failing (custom messages) # time = 10.618919ms
 
   1..1
@@ -1771,6 +1781,7 @@ await spawner(
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
       ok 34 - should throw
+      1..34
   not ok 1 - inverted passing and failing mixed # time = 11.326632ms
 
   1..1

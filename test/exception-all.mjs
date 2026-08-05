@@ -105,6 +105,7 @@ await tester(
       ok 13 - should reject
       ok 14 - should reject
       ok 15 - should reject
+      1..15
   ok 1 - exception.all does not crash when an error is native # time = 2.143232ms
 
   1..1

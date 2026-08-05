@@ -56,6 +56,7 @@ await spawner(
 
   # try inverted deadlock
       ok 1 - passed
+      1..1
   ok 1 - try inverted deadlock # time = 0.614412ms
 
   1..1
@@ -81,6 +82,7 @@ await tester(
 
   # try deadlock by child with plan
       ok 1 - passed
+      1..1
   ok 1 - try deadlock by child with plan # time = 0.662356ms
 
   1..1
@@ -106,6 +108,7 @@ await tester(
 
   # try deadlock by child without plan
       ok 1 - passed
+      1..1
   ok 1 - try deadlock by child without plan # time = 0.651919ms
 
   1..1

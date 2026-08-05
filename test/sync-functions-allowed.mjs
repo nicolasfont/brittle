@@ -10,6 +10,7 @@ await tester(
 
   # sync function allowed
       ok 1 - passed
+      1..1
   ok 1 - sync function allowed # time = 0.610103ms
 
   1..1

@@ -22,11 +22,13 @@ await spawner(
   TAP version 13
 
   # this solo is ran
-    ok 1 - passed
+      ok 1 - passed
+      1..1
   ok 1 - this solo is ran # time = 0.761623ms
 
   # this solo is also ran
       ok 1 - passed
+      1..1
   ok 2 - this solo is also ran # time = 0.06351ms
 
   1..2

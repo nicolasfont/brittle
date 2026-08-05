@@ -58,24 +58,29 @@ await spawner(
 
   # async teardown
       ok 1 - should be equal
+      1..1
   ok 1 - async teardown # time = 102.386659ms
 
   # sync teardown
       ok 1 - should be equal
       ok 2 - should be equal
+      1..2
   ok 2 - sync teardown # time = 1.117214ms
 
   # checking order
       ok 1 - should be equal
+      1..1
   ok 3 - checking order # time = 0.325406ms
 
   # plan with teardown
       ok 1 - should be equal
       ok 2 - should be equal
+      1..2
   ok 4 - plan with teardown # time = 101.757178ms
 
   # child teardown
       ok 1 - (child) - should be equal
+      1..1
   ok 5 - child teardown # time = 100.73231ms
 
   1..5

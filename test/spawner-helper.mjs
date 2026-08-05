@@ -10,12 +10,14 @@ const VALID_TAP_OUTPUT = `TAP version 13
 
 # comment after end
     ok 1 - should be equal
+    1..1
 ok 1 - comment after end # time = 0.716469ms`
 
 const WRONG_TAP_OUTPUT = `TAP vErSiOn 13
 
 # comment after end
     ok 1 - sHoUlD bE eQuAl
+    1..1
 ok 1 - comment after end # time = 0.716469ms`
 
 const VALID_STDERR = { includes: "Can't comment after end" }

@@ -21,6 +21,7 @@ await spawner(
 
   # success
       ok 1 - passed
+      1..1
   ok 1 - success # time = 0.691659ms
 
   # fail
@@ -31,6 +32,7 @@ await spawner(
           [eval]:11:9
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..1
   not ok 2 - fail # time = 3.498153ms
   Bail out!
 

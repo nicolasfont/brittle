@@ -21,12 +21,14 @@ await spawner(
       ok 1 - hey world
       ok 2 - hey world
       ok 3 - hey world
+      1..3
   ok 2 - hey world # time = 300ms
 
   # hi world
       ok 1 - hi world
       ok 2 - hi world
       ok 3 - hi world
+      1..3
   ok 3 - hi world # time = 300ms
 
   # hi world post hook
@@ -59,6 +61,7 @@ await spawner(
       ok 1 - hello world
       ok 2 - hello world
       ok 3 - hello world
+      1..3
   ok 1 - hello world # time = 301ms
 
   # failing hey world
@@ -77,12 +80,14 @@ await spawner(
           ./test/fixtures/threads/bail/heyworld.mjs:4:5
           Test._run (./index.js:706:13)
         ...
+      1..1
   not ok 2 - failing hey world # time = 5ms
 
   # hi world
       ok 1 - hi world
       ok 2 - hi world
       ok 3 - hi world
+      1..3
   ok 3 - hi world # time = 301ms
   Bail out!
 

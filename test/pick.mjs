@@ -21,6 +21,7 @@ await spawner(
 
   # only this one should run
       ok 1 - passed
+      1..1
   ok 1 - only this one should run # time = 0.613949ms
 
   1..1
@@ -59,6 +60,7 @@ await spawner(
 
   # first test
       ok 1 - hook should still run for the selected test
+      1..1
   ok 2 - first test # time = 0.613949ms
 
   1..2
@@ -114,6 +116,7 @@ await spawner(
 
   # only this one should run, even though it was marked skip
       ok 1 - passed
+      1..1
   ok 1 - only this one should run, even though it was marked skip # time = 0.613949ms
 
   1..1

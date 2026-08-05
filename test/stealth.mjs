@@ -26,6 +26,7 @@ await spawner(
 
   # top-level non-stealth
       ok 1 - should print
+      1..1
   ok 2 - top-level non-stealth # time = 0.086718ms
 
   # another top-level stealth
@@ -69,10 +70,12 @@ await spawner(
           [eval]:5:9
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..1
   not ok 1 - top-level stealth fails # time = 2.513549ms
 
   # top-level non-stealth
       ok 1 - should print
+      1..1
   ok 2 - top-level non-stealth # time = 0.205535ms
 
   # another top-level stealth
@@ -109,6 +112,7 @@ await spawner(
       ok 1 - should print due to unstealth
       ok 2 - (child) - should also print due to unstealth
       ok 3 - (child) - should also print due to unstealth
+      1..3
   ok 1 - another top-level stealth # time = 0.358672ms
 
   1..1
@@ -196,6 +200,7 @@ await tester(
   # stealth test child
       ok 1 - not stealth before
       ok 4 - not stealth after
+      1..2
   ok 1 - stealth test child # time = 0.328614ms
 
   1..1
@@ -232,6 +237,7 @@ await tester(
   # stealth method
       ok 1 - not stealth before
       ok 5 - not stealth after
+      1..2
   ok 1 - stealth method # time = 0.353113ms
 
   1..1
@@ -263,6 +269,7 @@ await tester(
   # inverted stealth method
       ok 1 - not stealth before
       ok 4 - not stealth after
+      1..2
   ok 1 - inverted stealth method # time = 0.393974ms
 
   1..1
@@ -298,6 +305,7 @@ await tester(
       ok 1 - not stealth before
       ok 4 - execution resolves
       ok 5 - not stealth after
+      1..3
   ok 1 - stealth test execution # time = 0.521082ms
 
   1..1
@@ -336,6 +344,7 @@ await tester(
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
       ok 4 - not stealth after
+      1..3
   not ok 1 - stealth test with error # time = 2.747684ms
 
   1..1
@@ -381,6 +390,7 @@ await spawner(
           [eval]:5:9
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..1
   not ok 1 - top-level stealth bails on first failure # time = 2.567648ms
 
   # nested stealth bails on first failure
@@ -394,6 +404,7 @@ await spawner(
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
       ok 3 - also prints here
+      1..3
   not ok 2 - nested stealth bails on first failure # time = 0.600648ms
 
   # another top-level stealth

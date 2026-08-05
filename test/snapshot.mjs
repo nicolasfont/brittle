@@ -26,6 +26,7 @@ await tester(
       ok 1 - should match snapshot
       ok 2 - should match snapshot
       ok 3 - should match snapshot
+      1..3
   ok 1 - basic snapshot # time = 0ms
   
   1..1
@@ -54,6 +55,7 @@ await tester(
       ok 1 - should match snapshot
       ok 2 - should match snapshot
       ok 3 - should match snapshot
+      1..3
   ok 1 - basic snapshot # time = 0ms
  
   1..1
@@ -97,6 +99,7 @@ await tester(
           _fn (./test/_script.js:5:7)
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
       ...
+      1..2
   not ok 1 - basic snapshot # time = 0ms
 
   1..1
@@ -146,6 +149,7 @@ await tester(
       ok 1 - should match snapshot
       ok 2 - should match snapshot
       ok 3 - should match snapshot
+      1..3
   ok 1 - typed array snapshots # time = 0ms
   
   1..1
@@ -178,6 +182,7 @@ await tester(
       ok 1 - should match snapshot
       ok 2 - should match snapshot
       ok 3 - should match snapshot
+      1..3
   ok 1 - typed array snapshots # time = 0ms
 
   1..1
@@ -229,6 +234,7 @@ await tester(
           _fn (./test/_script.js:10:7)
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..3
   not ok 1 - typed array snapshots # time = 0ms
 
   1..1
@@ -269,6 +275,7 @@ await tester(
 
   # buffer conversion to uint8array
       ok 1 - should match snapshot
+      1..1
   ok 1 - buffer conversion to uint8array # time = 0ms
 
   1..1
@@ -294,6 +301,7 @@ await tester(
 
   # buffer conversion to uint8array
       ok 1 - should match snapshot
+      1..1
   ok 1 - buffer conversion to uint8array # time = 0ms
 
   1..1
@@ -342,6 +350,7 @@ await tester(
           _fn (./test/_script.js:5:7)
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..1
   not ok 1 - buffer conversion to uint8array # time = 0ms
 
   1..1
@@ -372,6 +381,7 @@ await tester(
       ok 1 - same message
       ok 2 - same message
       ok 3 - same message
+      1..3
   ok 1 - multiple snapshots with the same message # time = 0ms
 
   1..1
@@ -400,6 +410,7 @@ await tester(
       ok 1 - same message
       ok 2 - same message
       ok 3 - same message
+      1..3
   ok 1 - multiple snapshots with the same message # time = 0ms
 
   1..1
@@ -441,6 +452,7 @@ await tester(
           _fn (./test/_script.js:6:7)
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..3
   not ok 1 - multiple snapshots with the same message # time = 0ms
 
   1..1
@@ -469,6 +481,7 @@ await tester(
   # custom snapshot messages
       ok 1 - custom message 1
       ok 2 - custom message 2
+      1..2
   ok 1 - custom snapshot messages # time = 0ms
 
   1..1
@@ -495,6 +508,7 @@ await tester(
   # custom snapshot messages
       ok 1 - custom message 1
       ok 2 - custom message 2
+      1..2
   ok 1 - custom snapshot messages # time = 0ms
 
   1..1
@@ -534,6 +548,7 @@ await tester(
           _fn (./test/_script.js:5:7)
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..2
   not ok 1 - custom snapshot messages # time = 0ms
 
   1..1
@@ -572,6 +587,7 @@ await tester(
 
   # complex nested objects
       ok 1 - should match snapshot
+      1..1
   ok 1 - complex nested objects # time = 0ms
 
   1..1
@@ -608,6 +624,7 @@ await tester(
 
   # complex nested objects
       ok 1 - should match snapshot
+      1..1
   ok 1 - complex nested objects # time = 0ms
 
   1..1
@@ -679,6 +696,7 @@ await tester(
           _fn (./test/_script.js:16:7)
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..1
   not ok 1 - complex nested objects # time = 0ms
 
   1..1
@@ -706,6 +724,7 @@ await tester(
 
   # multiline strings use template literals
       ok 1 - should match snapshot
+      1..1
   ok 1 - multiline strings use template literals # time = 0ms
 
   1..1
@@ -731,6 +750,7 @@ await tester(
 
   # multiline strings use template literals
       ok 1 - should match snapshot
+      1..1
   ok 1 - multiline strings use template literals # time = 0ms
 
   1..1
@@ -775,6 +795,7 @@ await tester(
           _fn (./test/_script.js:5:7)
           process.processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..1
   not ok 1 - multiline strings use template literals # time = 0ms
 
   1..1
@@ -833,6 +854,7 @@ await tester(
       ok 3 - should match snapshot
       ok 4 - should match snapshot
       ok 5 - should match snapshot
+      1..5
   ok 1 - special-character strings round-trip # time = 0ms
 
   1..1

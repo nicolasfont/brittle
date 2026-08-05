@@ -26,6 +26,7 @@ await tester(
   [spawner tester] end of test function
   [spawner tester] teardown classic is called
   [spawner tester] teardown classic successful
+      1..1
   ok 1 - teardown classic # time = 212.699882ms
 
   1..1
@@ -70,6 +71,7 @@ await spawner(
       # ...teardown still running after 250ms
   [spawner tester] teardown inverted successful
       # ...teardown time 301.126046ms
+      1..1
   ok 1 - teardown inverted # time = 312.980566ms
 
   1..1
@@ -119,6 +121,7 @@ await tester(
   [spawner tester] teardown A
   [spawner tester] teardown B
   [spawner tester] teardown C
+      1..1
   ok 1 - teardown order option # time = 224.370336ms
 
   1..1
@@ -179,6 +182,7 @@ await tester(
       ok 1 - passed
   [spawner tester] end of test function
   [spawner tester] teardown of parent successful
+      1..1
   ok 1 - teardown of parent assert should not hang due to an active handle when child assert completion meets parent plan # time = 0.97601ms
 
   1..1

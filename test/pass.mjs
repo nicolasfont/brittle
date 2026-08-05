@@ -10,6 +10,7 @@ await tester(
 
   # classic no plan
       ok 1 - passed
+      1..1
   ok 1 - classic no plan # time = 0.615021ms
 
   1..1
@@ -33,6 +34,7 @@ await tester(
 
   # classic plan
       ok 1 - passed
+      1..1
   ok 1 - classic plan # time = 0.618707ms
 
   1..1
@@ -56,6 +58,7 @@ await tester(
 
   # classic plan w/comment
       ok 1 - passed
+      1..1
   ok 1 - classic plan w/comment # time = 0.615191ms
 
   1..1
@@ -79,6 +82,7 @@ await spawner(
 
   # inverted no plan
       ok 1 - passed
+      1..1
   ok 1 - inverted no plan # time = 0.674257ms
 
   1..1
@@ -103,6 +107,7 @@ await spawner(
 
   # inverted plan
       ok 1 - passed
+      1..1
   ok 1 - inverted plan # time = 0.665347ms
 
   1..1
@@ -127,6 +132,7 @@ await spawner(
 
   # inverted plan w/comment
       ok 1 - passed
+      1..1
   ok 1 - inverted plan w/comment # time = 0.674377ms
 
   1..1

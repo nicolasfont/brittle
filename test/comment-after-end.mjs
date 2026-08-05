@@ -12,6 +12,7 @@ await tester(
 
   # comment after end
       ok 1 - should be equal
+      1..1
   ok 1 - comment after end # time = 0.716469ms
   `,
   { exitCode: 'error', stderr: { includes: "Can't comment after end" } }

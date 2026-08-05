@@ -19,6 +19,7 @@ await spawner(
 
   # success
       ok 1 - passed
+      1..1
   ok 1 - success # time = 0.65909ms
 
   # fail
@@ -29,10 +30,12 @@ await spawner(
           [eval]:9:9
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..1
   not ok 2 - fail # time = 3.527995ms
 
   # success again
       ok 1 - passed
+      1..1
   ok 3 - success again # time = 0.062494ms
 
   1..3

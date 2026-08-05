@@ -18,6 +18,7 @@ fail message
           _fn ([eval]:10:7)
           processTicksAndRejections (node:internal/process/task_queues:105:5)
         ...
+      1..1
   not ok 1 - multiline fail message # time = 4.160992ms
 
   1..1
@@ -55,6 +56,7 @@ await tester(
           _fn ([eval]:10:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..1
   not ok 1 - multiline fail message with stack trace # time = 4.160992ms
 
   1..1
@@ -92,6 +94,7 @@ await tester(
           _fn ([eval]:10:7)
           processTicksAndRejections (node:internal/process/task_queues:96:5)
         ...
+      1..1
   not ok 1 - multiline fail message with Windows stack trace # time = 4.160992ms
 
   1..1

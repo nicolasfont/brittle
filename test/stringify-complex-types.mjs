@@ -18,6 +18,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - resolved Promise shows value in t.is failure # time = 0ms
 
   1..1
@@ -48,6 +49,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - pending Promise shows pending in t.is failure # time = 0ms
 
   1..1
@@ -80,6 +82,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - rejected Promise shows error in t.is failure # time = 0ms
 
   1..1
@@ -110,6 +113,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - Symbol shows type label in t.is failure # time = 0ms
 
   1..1
@@ -140,6 +144,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - RegExp shows pattern in t.is failure # time = 0ms
 
   1..1
@@ -170,6 +175,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - Date shows ISO string in t.is failure # time = 0ms
 
   1..1
@@ -200,6 +206,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - Error shows message in t.is failure # time = 0ms
 
   1..1
@@ -230,6 +237,7 @@ await tester(
           _fn ([eval]:4:7)
           process.processTicksAndRejections (node:internal/process/task_queues:103:5)
         ...
+      1..1
   not ok 1 - stringify - Map shows type label in t.is failure # time = 0ms
 
   1..1
