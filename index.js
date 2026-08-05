@@ -395,6 +395,7 @@ class Test {
     this._isTodo = opts?.todo || false
     this._isResolved = false
     this._isQueued = false
+    this._isTimedOut = false
     this._isMain = this._main === this
     this._isStealth = opts?.stealth || parent?._isStealth || false
     this._checkDeadlock = opts?.deadlock !== false
@@ -494,6 +495,16 @@ class Test {
     return this._isEnded || (this._hasPlan && this._planned === 0)
   }
 
+  // a timed out test keeps running in the background, everything it does from
+  // then on is ignored so it can't interfere with the tests that follow it
+  _abandoned() {
+    if (this._isTimedOut) return true
+    for (const p of this._parents) {
+      if (p._isTimedOut) return true
+    }
+    return false
+  }
+
   _timeout(ms) {
     if (!ms) {
       if (this._to) clearTimeout(this._to)
@@ -503,12 +514,38 @@ class Test {
 
     const ontimeout = () => {
       this._to = null
-      this._onend(new Error(`Test "${this.name}" timed out after ` + ms + ' ms'))
+      this._ontimeout(ms)
     }
 
     if (this._to) clearTimeout(this._to)
     this._to = setTimeout(ontimeout, ms)
     if (this._to.unref) this._to.unref()
+  }
+
+  _ontimeout(ms) {
+    if (this._isResolved) return
+
+    // not _assertion, that throws when the test already ended (ie. during teardown)
+    this._runner.assert(
+      !this._main._isResolved,
+      false,
+      this._track(false, false),
+      this._message('timed out after ' + ms + ' ms'),
+      { code: 'ERR_TIMEOUT', operator: 'timeout', timeout: ms },
+      false
+    )
+
+    this._isTimedOut = true
+
+    // teardown is already running, don't wait around for it to finish
+    if (this._isDone) {
+      this._onend(null)
+      return
+    }
+
+    this._isEnded = true
+    this._wait = false
+    this._done()
   }
 
   _plan(n) {
@@ -521,6 +558,7 @@ class Test {
   }
 
   _comment(...m) {
+    if (this._abandoned()) return
     if (this._isResolved) throw new Error("Can't comment after end")
     this._runner.log('comment', INDENT, ...m)
   }
@@ -571,6 +609,8 @@ class Test {
   }
 
   _assertion(ok, message, explanation, caller, top, isStealth = this._isStealth) {
+    if (this._abandoned()) return
+
     this._runner.assert(
       !this._main._isResolved,
       ok,
@@ -639,6 +679,7 @@ class Test {
   }
 
   _teardown(fn, opts = {}) {
+    if (this._abandoned()) return
     if (this._isDone) throw new Error("Can't add teardown after end")
     this._teardowns.push([opts.order || 0, !!opts.force, fn])
   }
@@ -815,13 +856,23 @@ class Test {
     try {
       await fn(this)
     } catch (err) {
-      if (!(
-        err instanceof AssertionError && err.message === 'ERR_ASSERTION: Stealth assertion failed'
-      )) {
+      if (
+        !this._abandoned() &&
+        !(
+          err instanceof AssertionError && err.message === 'ERR_ASSERTION: Stealth assertion failed'
+        )
+      ) {
         this._wait = false
         await this._runTeardown(err)
         throw err
       }
+    }
+
+    // timed out while the function was still running, it has already been reported as failed
+    if (this._abandoned()) {
+      this._wait = false
+      if (!this._isResolved) this._done()
+      return await this
     }
 
     if (!this._hasPlan) this.end()

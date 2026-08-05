@@ -124,8 +124,28 @@ await spawner(
   TAP version 13
 
   # timeout
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout # time = 21ms
+
+  # hello world
+      ok 1 - hello world
+      ok 2 - hello world
+      ok 3 - hello world
+  ok 2 - hello world # time = 301ms
+
+  1..2
+  # tests = 1/2 pass
+  # asserts = 3/4 pass
+  # time = 347ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(

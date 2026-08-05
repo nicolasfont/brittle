@@ -12,8 +12,22 @@ await spawner(
   TAP version 13
 
   # timeout option, classic, no plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout option, classic, no plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -28,8 +42,22 @@ await spawner(
   TAP version 13
 
   # timeout option, inverted, no plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout option, inverted, no plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -45,8 +73,22 @@ await spawner(
   TAP version 13
 
   # timeout option, classic, plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout option, classic, plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -62,8 +104,22 @@ await spawner(
   TAP version 13
 
   # timeout option, inverted, plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout option, inverted, plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -79,8 +135,22 @@ await spawner(
   TAP version 13
 
   # timeout method, classic, no plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout method, classic, no plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -96,8 +166,22 @@ await spawner(
   TAP version 13
 
   # timeout method, inverted, no plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout method, inverted, no plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -114,8 +198,22 @@ await spawner(
   TAP version 13
 
   # timeout method, classic, plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout method, classic, plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -132,6 +230,20 @@ await spawner(
   TAP version 13
 
   # timeout method, inverted, plan
+      not ok 1 - timed out after 10 ms
+        ---
+        code: ERR_TIMEOUT
+        operator: timeout
+        timeout: 10
+        ...
+  not ok 1 - timeout method, inverted, plan # time = 11.402584ms
+
+  1..1
+  # tests = 0/1 pass
+  # asserts = 0/1 pass
+  # time = 12.983ms
+
+  # not ok
   `,
-  { exitCode: 'error', stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )

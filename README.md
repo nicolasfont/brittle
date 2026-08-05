@@ -740,6 +740,11 @@ The `A` teardown is executed first, then `B`, and finally `C` due to the `order`
 
 Fail the test after a given timeout.
 
+A timed out test is reported as `not ok` and the run continues with the next test.\
+Note the timed out function is not aborted, it keeps running in the background, but anything it
+does afterwards (assertions, comments, teardowns) is ignored so it can't interfere with the
+tests that follow it.
+
 #### `t.comment(message)`
 
 Inject a TAP comment into the output.
@@ -798,6 +803,8 @@ On Node.js or when `jobs` is `1`, `load` falls back to a sequential import — n
 ### Default timeout
 
 The default timeout is 30 seconds.
+
+A test that hits it fails with `not ok` and the runner moves on to the next test.
 
 ### Example of `package.json` with `test` script
 
