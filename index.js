@@ -900,7 +900,7 @@ class Test {
     const ok = this.fails === 0
 
     if (this._isMain && !err) {
-      const time = this._timer ? ' # time = ' + this._timer() + 'ms' : ''
+      const time = this._timer ? ' # time=' + this._timer() + 'ms' : ''
       this._runner.assert(false, ok, this._track(true, ok), '- ' + (this.name || '') + time, null)
     }
 
