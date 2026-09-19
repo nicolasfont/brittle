@@ -101,9 +101,10 @@ await spawner(
   TAP version 13
 
   # plan
-  Bail out! Unhandled rejection
+  Bail out! Error: Test did not end (plan) [assertion count (0) did not reach plan (1)]
+      at prematureEnd (./index.js:1139:10)
   `,
-  { exitCode: 1, stderr: { includes: 'Error: Test did not end (plan)' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -118,9 +119,10 @@ await spawner(
   TAP version 13
 
   # timeout
-  Bail out! Unhandled rejection
+  Bail out! Error: Test "timeout" timed out after 10 ms
+      at ontimeout (./index.js:517:19)
   `,
-  { exitCode: 1, stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -146,9 +148,10 @@ await spawner(
   ok 2 - before thrown # time = 0ms
 
   # thrown
-  Bail out! Unhandled rejection
+  Bail out! Error: ERROR
+      at ./test/fixtures/threads/error/thrown.js:8:9
   `,
-  { exitCode: 1, stderr: { includes: 'Error: ERROR' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -163,9 +166,10 @@ await spawner(
   TAP version 13
 
   # lingering
-  Bail out! Unhandled rejection
+  Bail out! Error: Test "lingering" timed out after 10 ms
+      at ontimeout (./index.js:517:19)
   `,
-  { exitCode: 1, stderr: { includes: 'timed out after 10 ms' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(
@@ -218,9 +222,10 @@ await spawner(
       ok 1 - passed
   ok 1 - stray # time = 11ms
 
-  Bail out! Uncaught exception
+  Bail out! Error: STRAY
+      at ./test/fixtures/threads/error/stray.js:5:11
   `,
-  { exitCode: 1, stderr: { includes: 'Error: STRAY' } }
+  { exitCode: 1, stderr: '' }
 )
 
 await spawner(

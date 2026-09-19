@@ -83,13 +83,13 @@ class Runner {
         else if (data.type === 'state') this._updateState(data)
       })
 
-      const onerror = (event, reason) => (err) => {
+      const onerror = (event) => (err) => {
         // bail if no one else handles it
-        if (global.Bare.listenerCount(event) === 1) this.bailout(reason + '\n' + util.inspect(err))
+        if (global.Bare.listenerCount(event) === 1) this.bailout(util.inspect(err))
       }
 
-      global.Bare.on('uncaughtException', onerror('uncaughtException', 'Uncaught exception'))
-      global.Bare.on('unhandledRejection', onerror('unhandledRejection', 'Unhandled rejection'))
+      global.Bare.on('uncaughtException', onerror('uncaughtException'))
+      global.Bare.on('unhandledRejection', onerror('unhandledRejection'))
     }
 
     const ondeadlock = () => {
@@ -349,13 +349,8 @@ class Runner {
 
     program.exitCode = 1
 
-    // a bail out is a single line, so anything below it goes to stderr
-    const [message, ...rest] = reason.split('\n')
-
-    if (message) this.log('results', null, null, message)
+    if (reason) this.log('results', null, null, reason)
     else this.log('results')
-
-    if (rest.length) console.error(rest.join('\n'))
   }
 
   assert(indent, ok, number, message, explanation, stealth) {
